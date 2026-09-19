@@ -106,7 +106,7 @@
       <ul>
         <li><strong>C/C++ / STL：</strong>精通 C++，熟悉 C 语言；深入理解面向对象（封装、继承、多态、虚函数）；熟练使用 STL（vector / map / string / algorithm 等）；掌握 auto、lambda、智能指针、移动语义等常用特性；具备独立调试能力。</li>
         <li><strong>Windows / Qt 上位机：</strong>熟练使用 Qt Widgets 开发 Windows 桌面应用；熟悉信号槽与 Model/View（QStandardItemModel、QTreeView、QStackedWidget）；具备参数配置、多级树形管理、页面联动、实时预览及 QSettings（ini）持久化经验。</li>
-        <li><strong>工业通信 / PLC / OPC：</strong>了解 OPC 工作原理，具备 OPC UA 客户端开发经验，完成与 PLC / 下位机的数据读写、状态订阅与断线重连；了解串口、TCP 等常用上位机通信方式及现场联调流程。</li>
+        <li><strong>工业通信 / PLC / OPC：</strong>了解 OPC 工作原理，具备基于 open62541 封装 OPC UA 客户端的经验，完成与 PLC / 下位机的点位读写、状态订阅与断线重连；了解串口、TCP 等常用上位机通信方式及现场联调流程。</li>
         <li><strong>工具与工程：</strong>熟练使用 Visual Studio、CMake、Git；具备规范编程风格、模块化设计及开发文档 / 接口说明编写能力。</li>
       </ul>
     </section>
@@ -119,9 +119,9 @@
       </div>
       <div class="sub">负责激光切片桌面控制软件（Windows）的 C++/Qt 开发与维护，覆盖人机界面、设备通信、视觉处理；主产品 3D 为 OCCT/Mayo，另在材料编辑测试入口做 Qt–OSG 嵌入 Viewer 预研。</div>
       <ul>
-        <li><strong>Windows 人机界面：</strong>基于 Qt Widgets + C++/STL 开发材料工艺编辑界面，完成参数配置、图层管理、多级参数树与详情页联动、实时预览；使用 QSettings 实现 ini 配置持久化。</li>
-        <li><strong>PLC / OPC 通信：</strong>实现 OPC UA 客户端，完成与 PLC / 下位机的数据读写、运行状态订阅及异常断线重连，保障设备状态实时可监控。</li>
-        <li><strong>视觉定位：</strong>基于 Halcon 优化十字模板识别，提升加工视觉定位稳定性。</li>
+        <li><strong>Windows 人机界面：</strong>基于 Qt Widgets + C++/STL 开发材料工艺编辑界面，完成打印路径、工艺处理与激光设置等参数的可视化编辑；使用 QSettings 将配置以 INI 持久化。</li>
+        <li><strong>PLC / OPC 通信：</strong>基于 open62541 封装 OPC UA 客户端，完成与 PLC / 下位机的点位读写、运行状态订阅及异常断线重连。</li>
+        <li><strong>视觉定位：</strong>基于 Halcon 优化十字列阵中心定位，提升振镜校准精度。</li>
         <li><strong>Qt–OSG 嵌入预研：</strong>将 OpenSceneGraph 以 GraphicsWindowEmbedded 嵌入 Qt QOpenGLWidget（材料编辑「关于」测试入口），处理 OpenGL 上下文托管、窗口尺寸 / 高 DPI 视口同步及场景图交互。主产品 3D 仍为 OCCT/Mayo。</li>
         <li><strong>工程化与文档：</strong>使用 Visual Studio + CMake 划分 UI / 通信 / 视觉模块并完成跨模块构建；编写开发文档与接口说明。</li>
       </ul>
@@ -133,14 +133,13 @@
         <span>3D 打印 / 激光加工上位机控制系统　·　软件工程师</span>
         <span>2026.04 — 至今</span>
       </div>
-      <div class="sub">技术栈：C++　Qt Widgets　STL　OPC UA　Visual Studio　CMake　Halcon　OCCT/Mayo　OSG<br />
-      面向 3D 打印 / 激光加工设备的 Windows 桌面控制软件，覆盖工艺编辑、PLC 联机与视觉定位；主产品 3D 为 OCCT/Mayo，另做 Qt–OSG 嵌入 Viewer 预研。</div>
+      <div class="sub">技术栈：C++　Qt　STL　open62541　OPC UA　Halcon　OSG　Visual Studio　CMake<br />
+      负责 3D 打印设备 Windows 桌面控制软件的 C++/Qt 开发，覆盖 UI、设备通信、视觉定位、3D 可视化四大模块。</div>
       <ul>
-        <li><strong>材料工艺编辑（Windows 界面）：</strong>QTreeView + QStackedWidget + QStandardItemModel 实现多级参数树与详情页联动；完成工艺参数配置、图层管理与实时预览；QSettings 持久化 ini。</li>
-        <li><strong>OPC UA 通讯（PLC 联调）：</strong>封装 OPC UA 客户端，完成与 PLC 的点位读写、状态订阅，并处理会话异常与断线重连。</li>
-        <li><strong>视觉定位：</strong>优化十字模板识别，提高视觉定位精度。</li>
-        <li><strong>3D Viewer 原型（Qt–OSG）：</strong>GraphicsWindowEmbedded 嵌入 QOpenGLWidget，实现单线程渲染循环、高 DPI 视口同步与 Trackball 相机；完成 STL 加载、场景光照与材质、程序化几何，以及基于 MatrixTransform 的旋转 / 平移 / 缩放，验证嵌入式 Viewer 可行性。</li>
-        <li><strong>模块化交付：</strong>Visual Studio + CMake 分层组织界面、通信、视觉模块，补充接口说明，便于与电气 / 机械联调。</li>
+        <li><strong>材料编辑：</strong>实现材料参数可视化编辑，覆盖打印路径、工艺处理与激光设置，配置结果以 INI 文件持久化。</li>
+        <li><strong>OPC UA 通讯：</strong>基于 open62541 封装 OPC UA 客户端，完成与 PLC 的点位读写、状态订阅，并处理断线重连。</li>
+        <li><strong>定位优化：</strong>优化十字列阵中心定位，提高振镜校准精度。</li>
+        <li><strong>3D 可视化：</strong>负责 Qt 与 OpenSceneGraph 跨引擎集成，解决场景图交互控制问题。</li>
       </ul>
     </section>
 
