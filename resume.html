@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>简历 - 软件工程师（上位机软件）</title>
+  <style>
+    :root {
+      --accent: #1a9b9a;
+      --accent-dark: #147c7b;
+      --text: #222;
+      --muted: #666;
+      --line: #e6e6e6;
+      --bg: #f4f7f7;
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; background: var(--bg); color: var(--text); }
+    body {
+      font-family: "Source Han Sans SC", "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
+      font-size: 13.5px;
+      line-height: 1.55;
+    }
+    .page {
+      width: 210mm;
+      min-height: 297mm;
+      margin: 16px auto;
+      background: #fff;
+      padding: 16mm 16mm 14mm;
+      box-shadow: 0 8px 28px rgba(0,0,0,.08);
+    }
+    header { border-bottom: 2px solid var(--accent); padding-bottom: 10px; margin-bottom: 14px; }
+    h1 { margin: 0 0 6px; font-size: 26px; letter-spacing: .08em; }
+    .meta { color: var(--muted); font-size: 13px; }
+    .intent {
+      display: inline-block;
+      margin-top: 8px;
+      background: var(--accent);
+      color: #fff;
+      padding: 3px 10px;
+      border-radius: 3px;
+      font-size: 13px;
+    }
+    h2 {
+      margin: 16px 0 8px;
+      font-size: 16px;
+      color: var(--accent-dark);
+      border-left: 4px solid var(--accent);
+      padding: 2px 0 2px 10px;
+      background: linear-gradient(90deg, rgba(26,155,154,.08), transparent 70%);
+    }
+    .job-head, .proj-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+    .sub { color: var(--muted); margin-bottom: 6px; }
+    ul { margin: 4px 0 0; padding-left: 18px; }
+    li { margin: 4px 0; }
+    strong { font-weight: 700; }
+    .tags { margin: 6px 0 8px; }
+    .tag {
+      display: inline-block;
+      border: 1px solid var(--accent);
+      color: var(--accent-dark);
+      padding: 0 8px;
+      margin: 0 6px 6px 0;
+      border-radius: 12px;
+      font-size: 12px;
+    }
+    footer.hint {
+      margin-top: 18px;
+      color: #999;
+      font-size: 11px;
+      border-top: 1px dashed var(--line);
+      padding-top: 8px;
+    }
+    @media print {
+      body { background: #fff; }
+      .page { box-shadow: none; margin: 0; width: auto; min-height: auto; padding: 10mm 12mm; }
+      footer.hint { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <article class="page">
+    <header>
+      <h1>【姓名】</h1>
+      <div class="meta">电话：【手机号】　|　邮箱：【邮箱】　|　学历：本科（计算机相关）　|　意向城市：东莞 / 深圳</div>
+      <div class="intent">求职意向：软件工程师（上位机软件）</div>
+    </header>
+
+    <section>
+      <h2>专业技能</h2>
+      <div class="tags">
+        <span class="tag">C++</span>
+        <span class="tag">C</span>
+        <span class="tag">Qt</span>
+        <span class="tag">STL</span>
+        <span class="tag">Visual Studio</span>
+        <span class="tag">Windows 界面</span>
+        <span class="tag">OPC UA</span>
+        <span class="tag">open62541</span>
+        <span class="tag">PLC</span>
+      </div>
+      <ul>
+        <li><strong>C/C++ / STL：</strong>精通 C++，熟悉 C 语言；深入理解面向对象（封装、继承、多态、虚函数）；熟练使用 STL（vector / map / string / algorithm 等）；掌握 auto、lambda、智能指针、移动语义等常用特性；具备独立调试能力。</li>
+        <li><strong>Windows / Qt 上位机：</strong>熟练使用 Qt Widgets 开发 Windows 桌面应用；熟悉信号槽与 Model/View（QStandardItemModel、QTreeView、QStackedWidget）；具备参数配置、多级树形管理、页面联动、实时预览及 QSettings（ini）持久化经验。</li>
+        <li><strong>工业通信 / PLC / OPC：</strong>了解 OPC 工作原理，具备基于 open62541 封装 OPC UA 客户端的经验，完成与 PLC / 下位机的点位读写、状态订阅与断线重连；了解串口、TCP 等常用上位机通信方式及现场联调流程。</li>
+        <li><strong>工具与工程：</strong>熟练使用 Visual Studio、CMake、Git；具备规范编程风格、模块化设计及开发文档 / 接口说明编写能力。</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>工作经历</h2>
+      <div class="job-head">
+        <span>深圳众智激光科技集团有限公司　·　软件工程师（Windows 上位机）</span>
+        <span>2026.04 — 2026.09</span>
+      </div>
+      <div class="sub">负责 3D 打印 / 激光加工设备 Windows 桌面控制软件的 C++/Qt 开发与维护。</div>
+      <ul>
+        <li><strong>界面开发：</strong>基于 Qt Widgets 开发材料工艺编辑界面，完成打印路径、工艺处理、激光设置等参数的可视化配置，并以 INI 持久化；在材料编辑「关于」测试入口完成 Qt–OSG 嵌入式 3D Viewer 预研，主产品 3D 仍为 OCCT/Mayo。</li>
+        <li><strong>通信与交互：</strong>基于 open62541 封装 OPC UA 客户端，完成与 PLC 的点位读写、状态订阅及断线重连；负责 Qt 与 OpenSceneGraph 跨引擎集成，解决场景图旋转 / 平移 / 缩放等交互控制。</li>
+        <li><strong>团队协作：</strong>与电气 / PLC / 机械同事对齐点位表、工艺流程和振镜校准步骤，参与现场联调与问题定位；使用 Visual Studio + CMake 做模块化构建，编写开发文档与接口说明。</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>项目经历</h2>
+      <div class="proj-head">
+        <span>3D 打印 / 激光加工上位机控制系统　·　软件工程师</span>
+        <span>2026.04 — 至今</span>
+      </div>
+      <div class="sub">技术栈：C++　Qt　STL　open62541　OPC UA　Halcon　OSG　Visual Studio　CMake<br />
+      负责 3D 打印设备 Windows 桌面控制软件的 C++/Qt 开发，覆盖 UI、设备通信、视觉定位、3D 可视化四大模块。</div>
+      <ul>
+        <li><strong>材料编辑：</strong>实现材料参数可视化编辑，覆盖打印路径、工艺处理与激光设置，配置结果以 INI 文件持久化。</li>
+        <li><strong>OPC UA 通讯：</strong>基于 open62541 封装 OPC UA 客户端，完成与 PLC 的点位读写、状态订阅，并处理断线重连。</li>
+        <li><strong>定位优化：</strong>优化十字列阵中心定位，提高振镜校准精度。</li>
+        <li><strong>3D 可视化：</strong>负责 Qt 与 OpenSceneGraph 跨引擎集成，解决场景图交互控制问题。</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>自我评价</h2>
+      <ul>
+        <li>求职方向明确：Windows 工业上位机（C++ / Qt），对自动化控制与设备联调有持续兴趣。</li>
+        <li>与岗位要求对齐：具备 Qt 桌面界面、STL、Visual Studio 工程实践，以及 OPC UA 与 PLC 通信编程经验。</li>
+        <li>工作细致，重视异常处理、断线重连、参数持久化等现场细节；能按模块编写开发文档。</li>
+        <li>可与电气 / PLC / 机械同事对齐点位与流程，沟通直接，能快速融入调试与交付节奏。</li>
+      </ul>
+    </section>
+
+    <footer class="hint">打印：Ctrl+P → 目标「另存为 PDF」→ 纸张 A4，边距默认。投递前请替换页眉占位信息，并按实际补全教育背景。</footer>
+  </article>
+</body>
+</html>
